@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0"
+	prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.InteractionController">
+	<children>
+		<Pane prefHeight="40.0" prefWidth="600.0" style="-fx-background-color: black;">
+			<children>
+				<Label fx:id="playerName" layoutX="14.0" layoutY="10.0"
+					text="Welcome Player" textFill="WHITE" />
+				<Label layoutX="531.0" layoutY="10.0" text="Day: " textFill="WHITE" />
+				<Label layoutX="202.0" layoutY="10.0" text="Money:" textFill="WHITE" />
+				<Label layoutX="460.0" layoutY="10.0" text="Fuel:" textFill="WHITE" />
+				<Label layoutX="335.0" layoutY="10.0" text="Cargo Bay:"
+					textFill="WHITE" />
+				<AnchorPane layoutX="256.0" layoutY="10.0">
+					<children>
+						<Label fx:id="money" text="00000000" textFill="WHITE" />
+					</children>
+				</AnchorPane>
+				<Label fx:id="cargoBayStatus" layoutX="409.0" layoutY="10.0"
+					text="25/25" textFill="WHITE" />
+				<Label fx:id="fuelLabel" layoutX="494.0" layoutY="10.0" text="100"
+					textFill="WHITE" />
+				<Label fx:id="playerTurn" layoutX="563.0" layoutY="10.0" text="1000"
+					textFill="WHITE" />
+			</children>
+			<opaqueInsets>
+				<Insets />
+			</opaqueInsets>
+		</Pane>
+		<Pane layoutY="460.0" prefHeight="40.0" prefWidth="600.0"
+			style="-fx-background-color: black;">
+			<children>
+				<Button layoutX="14.0" layoutY="5.0" mnemonicParsing="false"
+					onAction="#save" text="Save" />
+				<Button layoutX="484.0" layoutY="5.0" mnemonicParsing="false"
+					onAction="#returnToMainScreen" text="Main Screen" />
+			</children>
+		</Pane>
+		<ImageView fitHeight="421.0" fitWidth="600.0" layoutY="40.0"
+			nodeOrientation="RIGHT_TO_LEFT" opacity="0.6" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/planet.png" />
+			</image>
+		</ImageView>
+		<Pane fx:id="shipPane" layoutX="20.0" layoutY="51.0" prefHeight="400.0"
+			prefWidth="400.0" />
+	</children>
+</AnchorPane>

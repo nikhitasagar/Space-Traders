@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchor" maxWidth="600.0" minWidth="600.0"
+	prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GamePage">
+	<children>
+		<ImageView fitHeight="420.0" fitWidth="600.0" layoutY="39.0"
+			opacity="0.77" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/gameScreen.jpg" />
+			</image>
+		</ImageView>
+		<Label fx:id="locationLabel" layoutX="21.0" layoutY="48.0"
+			opacity="0.53" prefHeight="46.0" prefWidth="436.0"
+			style="-fx-background-color: black;" text="Welcome to" textFill="WHITE">
+			<font>
+				<Font size="31.0" />
+			</font>
+		</Label>
+		<Pane prefHeight="40.0" prefWidth="600.0" style="-fx-background-color: black;">
+			<children>
+				<Label fx:id="playerName" layoutX="4.0" layoutY="10.0"
+					text="Welcome Player" textFill="WHITE" />
+				<Label layoutX="531.0" layoutY="10.0" text="Day: " textFill="WHITE" />
+				<Label layoutX="226.0" layoutY="10.0" text="Money:" textFill="WHITE" />
+				<Label layoutX="474.0" layoutY="10.0" text="Fuel:" textFill="WHITE" />
+				<Label layoutX="351.0" layoutY="10.0" text="Cargo Bay:"
+					textFill="WHITE" />
+				<AnchorPane layoutX="256.0" layoutY="10.0">
+					<children>
+						<Label fx:id="money" layoutX="23.0" text="00000000"
+							textFill="WHITE" />
+					</children>
+				</AnchorPane>
+				<Label fx:id="cargoBayStatus" layoutX="425.0" layoutY="10.0"
+					text="25/25" textFill="WHITE" />
+				<Label fx:id="fuelLabel" layoutX="508.0" layoutY="10.0" text="20"
+					textFill="WHITE" />
+				<Label fx:id="playerTurn" layoutX="563.0" layoutY="10.0" text="1000"
+					textFill="WHITE" />
+				<ImageView fx:id="inactivePerson1" fitHeight="30.0"
+					fitWidth="40.0" layoutX="187.0" layoutY="5.0" pickOnBounds="true"
+					preserveRatio="true">
+					<image>
+						<Image url="@../resources/inactivePerson.png" />
+					</image>
+				</ImageView>
+				<ImageView fx:id="activePerson1" fitHeight="30.0"
+					fitWidth="40.0" layoutX="187.0" layoutY="5.0" pickOnBounds="true"
+					preserveRatio="true">
+					<image>
+						<Image url="@../resources/person.png" />
+					</image>
+				</ImageView>
+				<Label layoutX="132.0" layoutY="10.0" text="Crew:" textFill="WHITE" />
+				<ImageView fx:id="activePerson2" fitHeight="30.0"
+					fitWidth="40.0" layoutX="165.0" layoutY="5.0" pickOnBounds="true"
+					preserveRatio="true">
+					<image>
+						<Image url="@../resources/person.png" />
+					</image>
+				</ImageView>
+			</children>
+			<opaqueInsets>
+				<Insets />
+			</opaqueInsets>
+		</Pane>
+		<Pane layoutY="460.0" prefHeight="40.0" prefWidth="600.0"
+			style="-fx-background-color: black;">
+			<children>
+				<Button layoutX="14.0" layoutY="5.0" mnemonicParsing="false"
+					onAction="#save" text="Save" />
+				<Button fx:id="enterMarketPlaceButton" layoutX="448.0"
+					layoutY="5.0" mnemonicParsing="false" onAction="#enterMarketPlace"
+					text="Visit Marketplace!" />
+				<Button fx:id="travelPageButton" layoutX="263.0" layoutY="5.0"
+					mnemonicParsing="false" onAction="#goToTravelPage" text="Travel to Another Planet" />
+				<Button layoutX="181.0" layoutY="5.0" mnemonicParsing="false"
+					onAction="#goToShipYard" text="Shipyard" />
+			</children>
+		</Pane>
+		<Line endX="500.0" layoutX="100.0" layoutY="40.0" startX="-100.0"
+			stroke="WHITE" />
+		<Line endX="500.0" layoutX="101.0" layoutY="459.0" startX="-100.0"
+			stroke="WHITE" />
+		<Label fx:id="techLabel" layoutX="21.0" layoutY="98.0" opacity="0.53"
+			prefHeight="40.0" prefWidth="436.0" style="-fx-background-color: black;"
+			text="Tech Level: " textFill="WHITE">
+			<font>
+				<Font size="31.0" />
+			</font>
+		</Label>
+		<Label fx:id="resourceLabel" layoutX="21.0" layoutY="148.0"
+			opacity="0.53" prefHeight="31.0" prefWidth="436.0"
+			style="-fx-background-color: black;" text="Resource: " textFill="WHITE">
+			<font>
+				<Font size="31.0" />
+			</font>
+		</Label>
+		<Label fx:id="resourceLabel1" layoutX="40.0" layoutY="198.0"
+			opacity="0.53" prefHeight="31.0" prefWidth="417.0"
+			style="-fx-background-color: black;" text="The Price of..." textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="drasticEventLabel" layoutX="21.0" layoutY="233.0"
+			opacity="0.53" prefHeight="31.0" prefWidth="436.0"
+			style="-fx-background-color: black;" text="Drastic Event" textFill="WHITE">
+			<font>
+				<Font size="31.0" />
+			</font>
+		</Label>
+		<ImageView fx:id="inactivePerson2" fitHeight="30.0"
+			fitWidth="40.0" layoutX="165.0" layoutY="5.0" pickOnBounds="true"
+			preserveRatio="true">
+			<image>
+				<Image url="@../resources/inactivePerson.png" />
+			</image>
+		</ImageView>
+	</children>
+</AnchorPane>

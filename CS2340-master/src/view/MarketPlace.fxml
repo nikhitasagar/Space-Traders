@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="600.0"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.MarketPlaceController">
+	<children>
+		<AnchorPane layoutY="460.0">
+			<children>
+				<Pane prefHeight="40.0" prefWidth="600.0"
+					style="-fx-background-color: black;">
+					<children>
+						<Button layoutX="14.0" layoutY="5.0" mnemonicParsing="false"
+							onAction="#save" text="Save" />
+						<Button layoutX="484.0" layoutY="5.0" mnemonicParsing="false"
+							onAction="#returnToMainScreen" text="Main Screen" />
+						<Button fx:id="buyMercenaries" layoutX="348.0" layoutY="5.0"
+							mnemonicParsing="false" onAction="#buyMercenaries" text="Buy Mercenaries" />
+					</children>
+				</Pane>
+			</children>
+		</AnchorPane>
+		<ImageView fitHeight="420.0" fitWidth="600.0" layoutY="40.0"
+			pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../resources/PRatikGame.png" />
+			</image>
+		</ImageView>
+		<Button fx:id="buy0" layoutX="163.0" layoutY="107.0"
+			mnemonicParsing="false" onAction="#buyWater" opacity="0.68"
+			style="-fx-background-color: #480000;" text="Buy" textFill="WHITE" />
+		<Button fx:id="buy1" layoutX="163.0" layoutY="141.0"
+			mnemonicParsing="false" onAction="#buyFurs" opacity="0.68"
+			style="-fx-background-color: #480000;" text="Buy" textFill="WHITE" />
+		<Button fx:id="buy3" layoutX="163.0" layoutY="208.0"
+			mnemonicParsing="false" onAction="#buyOre" opacity="0.68"
+			style="-fx-background-color: #480000;" text="Buy" textFill="WHITE" />
+		<Button fx:id="buy2" layoutX="163.0" layoutY="174.0"
+			mnemonicParsing="false" onAction="#buyFood" opacity="0.68"
+			style="-fx-background-color: #480000;" text="Buy" textFill="WHITE" />
+		<Button fx:id="buy6" layoutX="163.0" layoutY="309.0"
+			mnemonicParsing="false" onAction="#buyMedicine" opacity="0.68"
+			style="-fx-background-color: #480000;" text="Buy" textFill="WHITE" />
+		<Button fx:id="buy7" layoutX="163.0" layoutY="343.0"
+			mnemonicParsing="false" onAction="#buyMachines" opacity="0.68"
+			style="-fx-background-color: #480000;" text="Buy" textFill="WHITE" />
+		<Button fx:id="buy5" layoutX="163.0" layoutY="276.0"
+			mnemonicParsing="false" onAction="#buyFireArms" opacity="0.68"
+			style="-fx-background-color: #480000;" text="Buy" textFill="WHITE" />
+		<Button fx:id="buy4" layoutX="163.0" layoutY="242.0"
+			mnemonicParsing="false" onAction="#buyGames" opacity="0.68"
+			style="-fx-background-color: #480000;" text="Buy" textFill="WHITE" />
+		<Button fx:id="buy9" layoutX="163.0" layoutY="411.0"
+			mnemonicParsing="false" onAction="#buyRobots" opacity="0.68"
+			style="-fx-background-color: #480000;" text="Buy" textFill="WHITE" />
+		<Button fx:id="buy8" layoutX="163.0" layoutY="377.0"
+			mnemonicParsing="false" onAction="#buyNarcotics" opacity="0.68"
+			style="-fx-background-color: #480000;" text="Buy" textFill="WHITE" />
+		<Button fx:id="sell8" layoutX="417.0" layoutY="377.0"
+			mnemonicParsing="false" onAction="#sellNarcotics" opacity="0.68"
+			style="-fx-background-color: #480000;" text="Sell" textFill="WHITE" />
+		<Button fx:id="sell9" layoutX="417.0" layoutY="411.0"
+			mnemonicParsing="false" onAction="#sellRobots" opacity="0.68"
+			style="-fx-background-color: #480000;" text="Sell" textFill="WHITE" />
+		<Button fx:id="sell4" layoutX="417.0" layoutY="242.0"
+			mnemonicParsing="false" onAction="#sellGames" opacity="0.68"
+			style="-fx-background-color: #480000;" text="Sell" textFill="WHITE" />
+		<Button fx:id="sell5" layoutX="417.0" layoutY="276.0"
+			mnemonicParsing="false" onAction="#sellFireArms" opacity="0.68"
+			style="-fx-background-color: #480000;" text="Sell" textFill="WHITE" />
+		<Button fx:id="sell7" layoutX="417.0" layoutY="343.0"
+			mnemonicParsing="false" onAction="#sellMachines" opacity="0.68"
+			style="-fx-background-color: #480000;" text="Sell" textFill="WHITE" />
+		<Button fx:id="sell6" layoutX="417.0" layoutY="309.0"
+			mnemonicParsing="false" onAction="#sellMedicine" opacity="0.68"
+			style="-fx-background-color: #480000;" text="Sell" textFill="WHITE" />
+		<Button fx:id="sell2" layoutX="417.0" layoutY="174.0"
+			mnemonicParsing="false" onAction="#sellFood" opacity="0.68"
+			style="-fx-background-color: #480000;" text="Sell" textFill="WHITE" />
+		<Button fx:id="sell3" layoutX="417.0" layoutY="208.0"
+			mnemonicParsing="false" onAction="#sellOre" opacity="0.68"
+			style="-fx-background-color: #480000;" text="Sell" textFill="WHITE" />
+		<Button fx:id="sell1" layoutX="417.0" layoutY="141.0"
+			mnemonicParsing="false" onAction="#sellFurs" opacity="0.68"
+			style="-fx-background-color: #480000;" text="Sell" textFill="WHITE" />
+		<Button fx:id="sell0" layoutX="417.0" layoutY="107.0"
+			mnemonicParsing="false" onAction="#sellWater" opacity="0.68"
+			style="-fx-background-color: #480000;" text="Sell" textFill="WHITE" />
+		<Label fx:id="price0" alignment="CENTER" contentDisplay="CENTER"
+			layoutX="239.0" layoutY="108.0" opacity="0.47"
+			style="-fx-background-color: black;" text="\$9999" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="price1" alignment="CENTER" contentDisplay="CENTER"
+			layoutX="239.0" layoutY="142.0" opacity="0.47"
+			style="-fx-background-color: black;" text="\$9999" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="price3" alignment="CENTER" contentDisplay="CENTER"
+			layoutX="239.0" layoutY="210.0" opacity="0.47"
+			style="-fx-background-color: black;" text="\$9999" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="price2" alignment="CENTER" contentDisplay="CENTER"
+			layoutX="239.0" layoutY="176.0" opacity="0.47"
+			style="-fx-background-color: black;" text="\$9999" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="price6" alignment="CENTER" contentDisplay="CENTER"
+			layoutX="239.0" layoutY="312.0" opacity="0.47"
+			style="-fx-background-color: black;" text="\$9999" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="price7" alignment="CENTER" contentDisplay="CENTER"
+			layoutX="239.0" layoutY="346.0" opacity="0.47"
+			style="-fx-background-color: black;" text="\$9999" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="price5" alignment="CENTER" contentDisplay="CENTER"
+			layoutX="239.0" layoutY="278.0" opacity="0.47"
+			style="-fx-background-color: black;" text="\$9999" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="price4" alignment="CENTER" contentDisplay="CENTER"
+			layoutX="239.0" layoutY="244.0" opacity="0.47"
+			style="-fx-background-color: black;" text="\$9999" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="price9" alignment="CENTER" contentDisplay="CENTER"
+			layoutX="239.0" layoutY="414.0" opacity="0.47"
+			style="-fx-background-color: black;" text="\$9999" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="price8" alignment="CENTER" contentDisplay="CENTER"
+			layoutX="239.0" layoutY="380.0" opacity="0.47"
+			style="-fx-background-color: black;" text="\$9999" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="items8" layoutX="510.0" layoutY="380.0" opacity="0.47"
+			style="-fx-background-color: black;" text="25" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="items9" layoutX="510.0" layoutY="414.0" opacity="0.47"
+			style="-fx-background-color: black;" text="25" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="items4" layoutX="510.0" layoutY="244.0" opacity="0.47"
+			style="-fx-background-color: black;" text="25" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="items5" layoutX="510.0" layoutY="278.0" opacity="0.47"
+			style="-fx-background-color: black;" text="25" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="items7" layoutX="510.0" layoutY="346.0" opacity="0.47"
+			style="-fx-background-color: black;" text="25" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="items6" layoutX="510.0" layoutY="312.0" opacity="0.47"
+			style="-fx-background-color: black;" text="25" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="items2" layoutX="510.0" layoutY="176.0" opacity="0.47"
+			style="-fx-background-color: black;" text="25" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="items3" layoutX="510.0" layoutY="210.0" opacity="0.47"
+			style="-fx-background-color: black;" text="25" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="items1" layoutX="510.0" layoutY="142.0" opacity="0.47"
+			style="-fx-background-color: black;" text="25" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="items0" layoutX="510.0" layoutY="108.0" opacity="0.47"
+			style="-fx-background-color: black;" text="25" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="price18" alignment="CENTER" contentDisplay="CENTER"
+			layoutX="334.0" layoutY="380.0" opacity="0.47"
+			style="-fx-background-color: black;" text="\$9999" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="price19" alignment="CENTER" contentDisplay="CENTER"
+			layoutX="334.0" layoutY="414.0" opacity="0.47"
+			style="-fx-background-color: black;" text="\$9999" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="price14" alignment="CENTER" contentDisplay="CENTER"
+			layoutX="334.0" layoutY="244.0" opacity="0.47"
+			style="-fx-background-color: black;" text="\$9999" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="price15" alignment="CENTER" contentDisplay="CENTER"
+			layoutX="334.0" layoutY="278.0" opacity="0.47"
+			style="-fx-background-color: black;" text="\$9999" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="price17" alignment="CENTER" contentDisplay="CENTER"
+			layoutX="334.0" layoutY="346.0" opacity="0.47"
+			style="-fx-background-color: black;" text="\$9999" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="price16" alignment="CENTER" contentDisplay="CENTER"
+			layoutX="334.0" layoutY="312.0" opacity="0.47"
+			style="-fx-background-color: black;" text="\$9999" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="price12" alignment="CENTER" contentDisplay="CENTER"
+			layoutX="334.0" layoutY="176.0" opacity="0.47"
+			style="-fx-background-color: black;" text="\$9999" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="price13" alignment="CENTER" contentDisplay="CENTER"
+			layoutX="334.0" layoutY="210.0" opacity="0.47"
+			style="-fx-background-color: black;" text="\$9999" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="price11" alignment="CENTER" contentDisplay="CENTER"
+			layoutX="334.0" layoutY="142.0" opacity="0.47"
+			style="-fx-background-color: black;" text="\$9999" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="price10" alignment="CENTER" contentDisplay="CENTER"
+			layoutX="334.0" layoutY="108.0" opacity="0.47"
+			style="-fx-background-color: black;" text="\$9999" textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<ImageView fx:id="greenArrow0" fitHeight="15.0" fitWidth="15.0"
+			layoutX="220.0" layoutY="115.0" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/greenArrow.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="greenArrow1" fitHeight="15.0" fitWidth="15.0"
+			layoutX="220.0" layoutY="149.0" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/greenArrow.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="greenArrow3" fitHeight="15.0" fitWidth="15.0"
+			layoutX="220.0" layoutY="217.0" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/greenArrow.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="greenArrow2" fitHeight="15.0" fitWidth="15.0"
+			layoutX="220.0" layoutY="183.0" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/greenArrow.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="greenArrow6" fitHeight="15.0" fitWidth="15.0"
+			layoutX="220.0" layoutY="318.0" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/greenArrow.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="greenArrow7" fitHeight="15.0" fitWidth="15.0"
+			layoutX="220.0" layoutY="352.0" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/greenArrow.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="greenArrow5" fitHeight="15.0" fitWidth="15.0"
+			layoutX="220.0" layoutY="284.0" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/greenArrow.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="greenArrow4" fitHeight="15.0" fitWidth="15.0"
+			layoutX="220.0" layoutY="250.0" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/greenArrow.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="greenArrow9" fitHeight="15.0" fitWidth="15.0"
+			layoutX="220.0" layoutY="421.0" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/greenArrow.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="greenArrow8" fitHeight="15.0" fitWidth="15.0"
+			layoutX="220.0" layoutY="387.0" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/greenArrow.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redArrow0" fitHeight="15.0" fitWidth="15.0"
+			layoutX="294.0" layoutY="116.0" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/redArrow.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redArrow1" fitHeight="15.0" fitWidth="15.0"
+			layoutX="294.0" layoutY="150.0" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/redArrow.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redArrow3" fitHeight="15.0" fitWidth="15.0"
+			layoutX="294.0" layoutY="218.0" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/redArrow.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redArrow2" fitHeight="15.0" fitWidth="15.0"
+			layoutX="294.0" layoutY="184.0" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/redArrow.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redArrow6" fitHeight="15.0" fitWidth="15.0"
+			layoutX="294.0" layoutY="320.0" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/redArrow.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redArrow7" fitHeight="15.0" fitWidth="15.0"
+			layoutX="294.0" layoutY="354.0" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/redArrow.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redArrow5" fitHeight="15.0" fitWidth="15.0"
+			layoutX="294.0" layoutY="286.0" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/redArrow.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redArrow4" fitHeight="15.0" fitWidth="15.0"
+			layoutX="294.0" layoutY="252.0" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/redArrow.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redArrow9" fitHeight="15.0" fitWidth="15.0"
+			layoutX="294.0" layoutY="422.0" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/redArrow.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redArrow8" fitHeight="15.0" fitWidth="15.0"
+			layoutX="294.0" layoutY="388.0" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/redArrow.png" />
+			</image>
+		</ImageView>
+		<Pane prefHeight="40.0" prefWidth="600.0" style="-fx-background-color: black;">
+			<children>
+				<Label fx:id="playerName" layoutX="4.0" layoutY="10.0"
+					text="Welcome Player" textFill="WHITE" />
+				<Label layoutX="531.0" layoutY="10.0" text="Day: " textFill="WHITE" />
+				<Label layoutX="226.0" layoutY="10.0" text="Money:" textFill="WHITE" />
+				<Label layoutX="474.0" layoutY="10.0" text="Fuel:" textFill="WHITE" />
+				<Label layoutX="351.0" layoutY="10.0" text="Cargo Bay:"
+					textFill="WHITE" />
+				<AnchorPane layoutX="256.0" layoutY="10.0">
+					<children>
+						<Label fx:id="money" layoutX="23.0" text="00000000"
+							textFill="WHITE" />
+					</children>
+				</AnchorPane>
+				<Label fx:id="cargoBayStatus" layoutX="425.0" layoutY="10.0"
+					text="25/25" textFill="WHITE" />
+				<Label fx:id="fuelLabel" layoutX="508.0" layoutY="10.0" text="20"
+					textFill="WHITE" />
+				<Label fx:id="playerTurn" layoutX="563.0" layoutY="10.0" text="1000"
+					textFill="WHITE" />
+				<ImageView fx:id="inactivePerson1" fitHeight="30.0"
+					fitWidth="40.0" layoutX="187.0" layoutY="5.0" pickOnBounds="true"
+					preserveRatio="true">
+					<image>
+						<Image url="@../resources/inactivePerson.png" />
+					</image>
+				</ImageView>
+				<ImageView fx:id="activePerson1" fitHeight="30.0"
+					fitWidth="40.0" layoutX="187.0" layoutY="5.0" pickOnBounds="true"
+					preserveRatio="true">
+					<image>
+						<Image url="@../resources/person.png" />
+					</image>
+				</ImageView>
+				<Label layoutX="132.0" layoutY="10.0" text="Crew:" textFill="WHITE" />
+				<ImageView fx:id="activePerson2" fitHeight="30.0"
+					fitWidth="40.0" layoutX="165.0" layoutY="5.0" pickOnBounds="true"
+					preserveRatio="true">
+					<image>
+						<Image url="@../resources/person.png" />
+					</image>
+				</ImageView>
+				<ImageView fx:id="inactivePerson2" fitHeight="30.0"
+					fitWidth="40.0" layoutX="165.0" layoutY="5.0" pickOnBounds="true"
+					preserveRatio="true">
+					<image>
+						<Image url="@../resources/inactivePerson.png" />
+					</image>
+				</ImageView>
+			</children>
+			<opaqueInsets>
+				<Insets />
+			</opaqueInsets>
+		</Pane>
+	</children>
+</AnchorPane>

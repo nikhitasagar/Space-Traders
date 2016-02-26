@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0"
+	prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.PirateInteraction">
+	<children>
+		<ImageView fitHeight="459.0" fitWidth="600.0" layoutY="40.0"
+			opacity="0.74" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/battleBackground.jpg" />
+			</image>
+		</ImageView>
+		<Pane layoutY="460.0" prefHeight="40.0" prefWidth="600.0"
+			style="-fx-background-color: black;">
+			<children>
+				<Button layoutX="14.0" layoutY="5.0" mnemonicParsing="false"
+					onAction="#save" text="Save" />
+				<Button layoutX="484.0" layoutY="5.0" mnemonicParsing="false"
+					onAction="#returnToMainScreen" text="Main Screen" />
+				<Button layoutX="419.0" layoutY="5.0" mnemonicParsing="false"
+					onAction="#move" text="Move" />
+			</children>
+		</Pane>
+		<Pane prefHeight="40.0" prefWidth="600.0" style="-fx-background-color: black;">
+			<children>
+				<Label fx:id="playerName" layoutX="14.0" layoutY="10.0"
+					text="Welcome Player" textFill="WHITE" />
+				<Label layoutX="531.0" layoutY="10.0" text="Day: " textFill="WHITE" />
+				<Label layoutX="202.0" layoutY="10.0" text="Money:" textFill="WHITE" />
+				<Label layoutX="460.0" layoutY="10.0" text="Fuel:" textFill="WHITE" />
+				<Label layoutX="335.0" layoutY="10.0" text="Cargo Bay:"
+					textFill="WHITE" />
+				<AnchorPane layoutX="256.0" layoutY="10.0">
+					<children>
+						<Label fx:id="money" text="00000000" textFill="WHITE" />
+					</children>
+				</AnchorPane>
+				<Label fx:id="cargoBayStatus" layoutX="409.0" layoutY="10.0"
+					text="25/25" textFill="WHITE" />
+				<Label fx:id="fuelLabel" layoutX="494.0" layoutY="10.0" text="100"
+					textFill="WHITE" />
+				<Label fx:id="playerTurn" layoutX="563.0" layoutY="10.0" text="1000"
+					textFill="WHITE" />
+			</children>
+			<opaqueInsets>
+				<Insets />
+			</opaqueInsets>
+		</Pane>
+		<ImageView fx:id="laser1" fitHeight="21.0" fitWidth="38.0"
+			layoutX="93.0" layoutY="240.0" pickOnBounds="true" rotate="-15.0">
+			<image>
+				<Image url="@../resources/blueLaser.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="laser2" fitHeight="21.0" fitWidth="38.0"
+			layoutX="93.0" layoutY="299.0" pickOnBounds="true" rotate="-15.0">
+			<image>
+				<Image url="@../resources/blueLaser.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="shipImage" fitHeight="183.0" fitWidth="253.0"
+			layoutX="326.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../resources/pirateShip.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="personImage" fitHeight="267.0" fitWidth="204.0"
+			layoutX="31.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../resources/battleView.png" />
+			</image>
+		</ImageView>
+		<ProgressBar fx:id="hpBarShip" layoutX="161.0" layoutY="79.0"
+			prefWidth="200.0" progress="0.0" />
+		<ProgressBar fx:id="hpBarPerson" layoutX="189.0" layoutY="325.0"
+			prefWidth="200.0" progress="0.0" />
+		<Label fx:id="hpLabelShip" layoutX="162.0" layoutY="58.0"
+			style="-fx-background-color: black;" text="HP: (100/100)" textFill="WHITE" />
+		<Label fx:id="hpLabelPerson" layoutX="190.0" layoutY="304.0"
+			style="-fx-background-color: black;" text="HP: (100/100)" textFill="WHITE" />
+	</children>
+</AnchorPane>

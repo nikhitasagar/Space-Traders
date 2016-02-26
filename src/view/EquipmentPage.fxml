@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.EquipmentPage">
+	<children>
+		<ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+			<image>
+				<Image url="@../../bin/resources/equipment.jpg" />
+			</image>
+		</ImageView>
+		<Label layoutX="242.0" layoutY="159.0" prefHeight="40.0"
+			prefWidth="110.0" text="Equipment Page!" />
+		<Button layoutX="465.0" layoutY="371.0" mnemonicParsing="false"
+			onAction="#goToMarketplace" text="Go to Marketplace" />
+	</children>
+</AnchorPane>

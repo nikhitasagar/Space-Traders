@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.StartNewGame">
+	<children>
+		<ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+			<image>
+				<Image url="@../../bin/resources/startpage.jpg" />
+			</image>
+		</ImageView>
+		<GridPane layoutX="20.0" prefHeight="331.0" prefWidth="560.0"
+			AnchorPane.bottomAnchor="69.0" AnchorPane.leftAnchor="20.0"
+			AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
+			<columnConstraints>
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+					prefWidth="100.0" />
+				<ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0"
+					minWidth="10.0" prefWidth="145.0" />
+				<ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0"
+					minWidth="2.0" prefWidth="98.0" />
+				<ColumnConstraints hgrow="SOMETIMES" maxWidth="108.0"
+					minWidth="2.0" prefWidth="108.0" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+			</rowConstraints>
+			<children>
+				<Label alignment="TOP_LEFT" text="Pilot" textFill="#f2ecec"
+					GridPane.rowIndex="1" />
+				<Label alignment="TOP_LEFT" text="Fighter" textFill="#f2ecec"
+					GridPane.rowIndex="2" />
+				<Label alignment="TOP_LEFT" text="Trader" textFill="#f2ecec"
+					GridPane.rowIndex="3" />
+				<Label alignment="TOP_LEFT" text="Engineer" textFill="#f2ecec"
+					GridPane.rowIndex="4" />
+				<Label alignment="TOP_LEFT" text="Investor" textFill="#f2ecec"
+					GridPane.rowIndex="5" />
+				<Label text="Skill Points Assigned" textFill="#f2ecec" />
+				<Label fx:id="skillPoints" text="0" textFill="#f2ecec"
+					GridPane.columnIndex="1" />
+				<Button mnemonicParsing="false" onAction="#pPointsIncrement"
+					text="+" textFill="#3c3838" GridPane.columnIndex="2"
+					GridPane.rowIndex="1" />
+				<Button mnemonicParsing="false" onAction="#pPointsDecrement"
+					text="-" textFill="#3c3838" GridPane.columnIndex="3"
+					GridPane.rowIndex="1" />
+				<Button mnemonicParsing="false" onAction="#fPointsIncrement"
+					text="+" textFill="#3c3838" GridPane.columnIndex="2"
+					GridPane.rowIndex="2" />
+				<Button mnemonicParsing="false" onAction="#tPointsIncrement"
+					text="+" textFill="#3c3838" GridPane.columnIndex="2"
+					GridPane.rowIndex="3" />
+				<Button mnemonicParsing="false" onAction="#ePointsIncrement"
+					text="+" textFill="#3c3838" GridPane.columnIndex="2"
+					GridPane.rowIndex="4" />
+				<Button mnemonicParsing="false" onAction="#iPointsIncrement"
+					text="+" textFill="#3c3838" GridPane.columnIndex="2"
+					GridPane.rowIndex="5" />
+				<Button mnemonicParsing="false" onAction="#fPointsDecrement"
+					text="-" textFill="#3c3838" GridPane.columnIndex="3"
+					GridPane.rowIndex="2" />
+				<Button mnemonicParsing="false" onAction="#tPointsDecrement"
+					text="-" textFill="#3c3838" GridPane.columnIndex="3"
+					GridPane.rowIndex="3" />
+				<Button mnemonicParsing="false" onAction="#ePointsDecrement"
+					text="-" textFill="#3c3838" GridPane.columnIndex="3"
+					GridPane.rowIndex="4" />
+				<Button mnemonicParsing="false" onAction="#iPointsDecrement"
+					text="-" textFill="#3c3838" GridPane.columnIndex="3"
+					GridPane.rowIndex="5" />
+				<Label fx:id="pilotPoints" text="0" textFill="#f2ecec"
+					GridPane.columnIndex="1" GridPane.rowIndex="1" />
+				<Label fx:id="fighterPoints" text="0" textFill="#f2ecec"
+					GridPane.columnIndex="1" GridPane.rowIndex="2" />
+				<Label fx:id="traderPoints" text="0" textFill="#f2ecec"
+					GridPane.columnIndex="1" GridPane.rowIndex="3" />
+				<Label fx:id="engineerPoints" text="0" textFill="#f2ecec"
+					GridPane.columnIndex="1" GridPane.rowIndex="4" />
+				<Label fx:id="investorPoints" text="0" textFill="#f2ecec"
+					GridPane.columnIndex="1" GridPane.rowIndex="5" />
+				<Label text="Total Skill Points" textFill="#f2ecec"
+					GridPane.columnIndex="2" />
+				<Label text="15" textFill="#f2ecec" GridPane.columnIndex="3" />
+			</children>
+		</GridPane>
+		<Button fx:id="cancelButton" layoutX="424.0" layoutY="348.0"
+			mnemonicParsing="false" onAction="#cancelAction" text="Cancel" />
+		<Button fx:id="proceedButton" layoutX="503.0" layoutY="348.0"
+			mnemonicParsing="false" onAction="#proceed" text="Proceed" />
+		<Label layoutX="20.0" layoutY="349.0" text="Name" textFill="#f8f4f4" />
+		<TextField fx:id="nameField" layoutX="88.0" layoutY="344.0" />
+	</children>
+</AnchorPane>

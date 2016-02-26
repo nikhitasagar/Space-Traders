@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="400.0" maxWidth="600.0"
+	minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.LoadGame">
+	<children>
+		<ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+			<image>
+				<Image url="@../../bin/resources/welcome.jpg" />
+			</image>
+		</ImageView>
+		<Button layoutX="14.0" layoutY="358.0" mnemonicParsing="false"
+			onAction="#returnToWelcomeScreen" text="Go Back" />
+		<Button layoutX="463.0" layoutY="358.0" mnemonicParsing="false"
+			onAction="#continueGame" text="Continue Game" />
+		<Label fx:id="savedGameLabel" alignment="CENTER" contentDisplay="CENTER"
+			layoutX="181.0" layoutY="28.0" text="No previously saved game detected"
+			textFill="WHITE" />
+	</children>
+</AnchorPane>

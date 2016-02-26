@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0"
+	prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.MercenaryPage">
+	<children>
+		<ImageView fitHeight="420.0" fitWidth="600.0" layoutY="40.0"
+			opacity="0.53" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../resources/MercenaryPage.png" />
+			</image>
+		</ImageView>
+		<Pane layoutY="460.0" prefHeight="40.0" prefWidth="600.0"
+			style="-fx-background-color: black;">
+			<children>
+				<Button layoutX="14.0" layoutY="5.0" mnemonicParsing="false"
+					onAction="#save" text="Save" />
+				<Button layoutX="484.0" layoutY="5.0" mnemonicParsing="false"
+					onAction="#returnToMainScreen" text="Main Screen" />
+				<Button layoutX="413.0" layoutY="5.0" mnemonicParsing="false"
+					onAction="#goToMarketPlace" text="Market" />
+				<Button layoutX="290.0" layoutY="5.0" mnemonicParsing="false"
+					onAction="#buy" text="Buy Mercenary" />
+			</children>
+		</Pane>
+		<ImageView fx:id="fighterImage" fitHeight="250.0" fitWidth="200.0"
+			layoutX="200.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../resources/fighter.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="rightArrow" fitHeight="78.0" fitWidth="67.0"
+			layoutX="416.0" layoutY="137.0" onMouseClicked="#moveRight"
+			pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../resources/rightArrow.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="leftArrow" fitHeight="78.0" fitWidth="67.0"
+			layoutX="119.0" layoutY="137.0" onMouseClicked="#moveLeft"
+			pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../resources/leftArrow.png" />
+			</image>
+		</ImageView>
+		<Label fx:id="name" layoutX="187.0" layoutY="296.0" maxHeight="-Infinity"
+			maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+			prefHeight="21.0" prefWidth="227.0" style="-fx-background-color: black;"
+			text="Name: Christopher Pike (Engineer)" textFill="WHITE" />
+		<ImageView fx:id="engineerImage" fitHeight="250.0" fitWidth="200.0"
+			layoutX="201.0" layoutY="46.0" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/engineer.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="investorImage" fitHeight="250.0" fitWidth="200.0"
+			layoutX="202.0" layoutY="45.0" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/investor.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="pilotImage" fitHeight="250.0" fitWidth="200.0"
+			layoutX="201.0" layoutY="45.0" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/pilot.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="traderImage" fitHeight="250.0" fitWidth="200.0"
+			layoutX="201.0" layoutY="45.0" pickOnBounds="true">
+			<image>
+				<Image url="@../resources/trader.png" />
+			</image>
+		</ImageView>
+		<ProgressBar fx:id="progressBar01" layoutX="234.0"
+			layoutY="320.0" prefHeight="7.0" prefWidth="132.0" progress="0.46"
+			style="-fx-accent: black;" />
+		<ProgressBar fx:id="progressBar11" layoutX="234.0"
+			layoutY="320.0" opacity="0.5" prefHeight="7.0" prefWidth="132.0"
+			progress="0.8" style="-fx-accent: blue;" />
+		<ProgressBar fx:id="progressBar02" layoutX="234.0"
+			layoutY="344.0" prefHeight="7.0" prefWidth="132.0" progress="0.46"
+			style="-fx-accent: black;" />
+		<ProgressBar fx:id="progressBar03" layoutX="234.0"
+			layoutY="368.0" prefHeight="7.0" prefWidth="132.0" progress="0.46"
+			style="-fx-accent: black;" />
+		<ProgressBar fx:id="progressBar04" layoutX="234.0"
+			layoutY="392.0" prefHeight="7.0" prefWidth="132.0" progress="0.46"
+			style="-fx-accent: black;" />
+		<ProgressBar fx:id="progressBar05" layoutX="234.0"
+			layoutY="416.0" prefHeight="7.0" prefWidth="132.0" progress="0.46"
+			style="-fx-accent: black;" />
+		<Label alignment="CENTER_RIGHT" layoutX="171.0" layoutY="321.0"
+			maxHeight="21.0" maxWidth="58.0" minHeight="21.0" minWidth="58.0"
+			prefHeight="21.0" prefWidth="58.0" style="-fx-background-color: black;"
+			text="Pilot" textFill="WHITE" />
+		<Label alignment="CENTER_RIGHT" layoutX="171.0" layoutY="345.0"
+			maxHeight="21.0" maxWidth="58.0" minHeight="21.0" minWidth="58.0"
+			prefHeight="21.0" prefWidth="58.0" style="-fx-background-color: black;"
+			text="Fighter" textFill="WHITE" />
+		<Label alignment="CENTER_RIGHT" layoutX="171.0" layoutY="369.0"
+			maxHeight="21.0" maxWidth="58.0" minHeight="21.0" minWidth="58.0"
+			prefHeight="21.0" prefWidth="58.0" style="-fx-background-color: black;"
+			text="Trader" textFill="WHITE" />
+		<Label alignment="CENTER_RIGHT" layoutX="171.0" layoutY="393.0"
+			maxHeight="21.0" maxWidth="58.0" minHeight="21.0" minWidth="58.0"
+			prefHeight="21.0" prefWidth="58.0" style="-fx-background-color: black;"
+			text="Engineer" textFill="WHITE" />
+		<Label alignment="CENTER_RIGHT" layoutX="171.0" layoutY="417.0"
+			maxHeight="21.0" maxWidth="58.0" minHeight="21.0" minWidth="58.0"
+			prefHeight="21.0" prefWidth="58.0" style="-fx-background-color: black;"
+			text="Investor" textFill="WHITE" />
+		<Label fx:id="skillChange4" alignment="CENTER" layoutX="373.0"
+			layoutY="417.0" maxHeight="21.0" maxWidth="58.0" minHeight="21.0"
+			minWidth="58.0" prefHeight="21.0" prefWidth="58.0"
+			style="-fx-background-color: black;" text="15 (+15)" textFill="WHITE" />
+		<Label fx:id="skillChange3" alignment="CENTER" layoutX="373.0"
+			layoutY="393.0" maxHeight="21.0" maxWidth="58.0" minHeight="21.0"
+			minWidth="58.0" prefHeight="21.0" prefWidth="58.0"
+			style="-fx-background-color: black;" text="15 (+15)" textFill="WHITE" />
+		<Label fx:id="skillChange2" alignment="CENTER" layoutX="373.0"
+			layoutY="369.0" maxHeight="21.0" maxWidth="58.0" minHeight="21.0"
+			minWidth="58.0" prefHeight="21.0" prefWidth="58.0"
+			style="-fx-background-color: black;" text="15 (+15)" textFill="WHITE" />
+		<Label fx:id="skillChange1" alignment="CENTER" layoutX="373.0"
+			layoutY="345.0" maxHeight="21.0" maxWidth="58.0" minHeight="21.0"
+			minWidth="58.0" prefHeight="21.0" prefWidth="58.0"
+			style="-fx-background-color: black;" text="15 (+15)" textFill="WHITE" />
+		<Label fx:id="skillChange0" alignment="CENTER" layoutX="373.0"
+			layoutY="321.0" maxHeight="21.0" maxWidth="58.0" minHeight="21.0"
+			minWidth="58.0" prefHeight="21.0" prefWidth="58.0"
+			style="-fx-background-color: black;" text="15 (+15)" textFill="WHITE" />
+		<ProgressBar fx:id="progressBar12" layoutX="234.0"
+			layoutY="344.0" opacity="0.5" prefHeight="7.0" prefWidth="132.0"
+			progress="0.8" style="-fx-accent: blue;" />
+		<ProgressBar fx:id="progressBar13" layoutX="234.0"
+			layoutY="368.0" opacity="0.5" prefHeight="7.0" prefWidth="132.0"
+			progress="0.8" style="-fx-accent: blue;" />
+		<ProgressBar fx:id="progressBar14" layoutX="235.0"
+			layoutY="392.0" opacity="0.5" prefHeight="7.0" prefWidth="132.0"
+			progress="0.8" style="-fx-accent: blue;" />
+		<ProgressBar fx:id="progressBar15" layoutX="234.0"
+			layoutY="416.0" opacity="0.5" prefHeight="7.0" prefWidth="132.0"
+			progress="0.8" style="-fx-accent: blue;" />
+		<Label fx:id="noMoney" layoutX="205.0" layoutY="63.0" opacity="0.82"
+			style="-fx-background-color: black;" text="NOT ENOUGH MONEY"
+			textFill="RED">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="noMoreCrew" layoutX="200.0" layoutY="101.0"
+			opacity="0.82" style="-fx-background-color: black;" text="NO MORE CREW SPACE"
+			textFill="RED">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="priceLabel" alignment="CENTER" contentDisplay="CENTER"
+			layoutX="236.0" layoutY="257.0" maxHeight="-Infinity" maxWidth="-Infinity"
+			minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0"
+			prefWidth="132.0" style="-fx-background-color: black;" text="Price: $5000"
+			textFill="WHITE">
+			<font>
+				<Font size="21.0" />
+			</font>
+		</Label>
+		<Pane prefHeight="40.0" prefWidth="600.0" style="-fx-background-color: black;">
+			<children>
+				<Label fx:id="playerName" layoutX="4.0" layoutY="10.0"
+					text="Welcome Player" textFill="WHITE" />
+				<Label layoutX="531.0" layoutY="10.0" text="Day: " textFill="WHITE" />
+				<Label layoutX="226.0" layoutY="10.0" text="Money:" textFill="WHITE" />
+				<Label layoutX="474.0" layoutY="10.0" text="Fuel:" textFill="WHITE" />
+				<Label layoutX="351.0" layoutY="10.0" text="Cargo Bay:"
+					textFill="WHITE" />
+				<AnchorPane layoutX="256.0" layoutY="10.0">
+					<children>
+						<Label fx:id="money" layoutX="23.0" text="00000000"
+							textFill="WHITE" />
+					</children>
+				</AnchorPane>
+				<Label fx:id="cargoBayStatus" layoutX="425.0" layoutY="10.0"
+					text="25/25" textFill="WHITE" />
+				<Label fx:id="fuelLabel" layoutX="508.0" layoutY="10.0" text="20"
+					textFill="WHITE" />
+				<Label fx:id="playerTurn" layoutX="563.0" layoutY="10.0" text="1000"
+					textFill="WHITE" />
+				<ImageView fx:id="inactivePerson1" fitHeight="30.0"
+					fitWidth="40.0" layoutX="187.0" layoutY="5.0" pickOnBounds="true"
+					preserveRatio="true">
+					<image>
+						<Image url="@../resources/inactivePerson.png" />
+					</image>
+				</ImageView>
+				<ImageView fx:id="activePerson1" fitHeight="30.0"
+					fitWidth="40.0" layoutX="187.0" layoutY="5.0" pickOnBounds="true"
+					preserveRatio="true">
+					<image>
+						<Image url="@../resources/person.png" />
+					</image>
+				</ImageView>
+				<Label layoutX="132.0" layoutY="10.0" text="Crew:" textFill="WHITE" />
+				<ImageView fx:id="activePerson2" fitHeight="30.0"
+					fitWidth="40.0" layoutX="165.0" layoutY="5.0" pickOnBounds="true"
+					preserveRatio="true">
+					<image>
+						<Image url="@../resources/person.png" />
+					</image>
+				</ImageView>
+				<ImageView fx:id="inactivePerson2" fitHeight="30.0"
+					fitWidth="40.0" layoutX="165.0" layoutY="5.0" pickOnBounds="true"
+					preserveRatio="true">
+					<image>
+						<Image url="@../resources/inactivePerson.png" />
+					</image>
+				</ImageView>
+			</children>
+			<opaqueInsets>
+				<Insets />
+			</opaqueInsets>
+		</Pane>
+	</children>
+</AnchorPane>

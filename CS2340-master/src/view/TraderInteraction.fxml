@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+	prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.TraderInteraction">
+	<children>
+		<Label layoutX="213.0" layoutY="157.0" text="you have just met a trader" />
+		<Pane layoutY="360.0" prefHeight="40.0" prefWidth="600.0"
+			style="-fx-background-color: black;">
+			<children>
+				<Button layoutX="14.0" layoutY="5.0" mnemonicParsing="false"
+					onAction="#save" text="Save" />
+				<Button layoutX="484.0" layoutY="5.0" mnemonicParsing="false"
+					onAction="#returnToMainScreen" text="Main Screen" />
+			</children>
+		</Pane>
+	</children>
+</AnchorPane>

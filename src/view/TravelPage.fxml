@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="500.0"
+	prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.TravelPage">
+	<children>
+		<Pane fx:id="universeMap" layoutX="70.0" layoutY="98.0" opacity="0.84"
+			prefHeight="310.0" prefWidth="460.0" style="-fx-background-color: black;">
+			<opaqueInsets>
+				<Insets />
+			</opaqueInsets>
+			<children>
+				<ImageView fitHeight="419.0" fitWidth="601.0" layoutX="-70.0"
+					layoutY="-58.0" opacity="0.82" pickOnBounds="true">
+					<image>
+						<Image url="@../resources/travelpagebackground.jpg" />
+					</image>
+				</ImageView>
+			</children>
+		</Pane>
+		<Label fx:id="currentPlanetLabel" layoutX="75.0" layoutY="57.0"
+			opacity="0.62" style="-fx-background-color: black;" text="Current Planet:"
+			textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="destinationLabel" layoutX="75.0" layoutY="419.0"
+			opacity="0.62" style="-fx-background-color: black;" text="Destination:"
+			textFill="WHITE">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Pane layoutY="460.0" prefHeight="40.0" prefWidth="600.0"
+			style="-fx-background-color: black;">
+			<children>
+				<Button layoutX="14.0" layoutY="5.0" mnemonicParsing="false"
+					onAction="#save" text="Save" />
+				<Button layoutX="484.0" layoutY="5.0" mnemonicParsing="false"
+					onAction="#returnToMainScreen" text="Main Screen" />
+				<Button fx:id="travelButton" layoutX="415.0" layoutY="5.0"
+					mnemonicParsing="false" onAction="#travel" text="Travel!" />
+				<Button fx:id="refuelButton" layoutX="271.0" layoutY="5.0"
+					mnemonicParsing="false" onAction="#refuel" text="Refuel (Cost = 00)" />
+			</children>
+		</Pane>
+		<Line endX="500.0" layoutX="100.0" layoutY="41.0" startX="-100.0"
+			stroke="WHITE" />
+		<Line endX="500.0" layoutX="100.0" layoutY="460.0" startX="-100.0"
+			stroke="WHITE" />
+		<Pane prefHeight="40.0" prefWidth="600.0" style="-fx-background-color: black;">
+			<children>
+				<Label fx:id="playerName" layoutX="4.0" layoutY="10.0"
+					text="Welcome Player" textFill="WHITE" />
+				<Label layoutX="531.0" layoutY="10.0" text="Day: " textFill="WHITE" />
+				<Label layoutX="226.0" layoutY="10.0" text="Money:" textFill="WHITE" />
+				<Label layoutX="474.0" layoutY="10.0" text="Fuel:" textFill="WHITE" />
+				<Label layoutX="351.0" layoutY="10.0" text="Cargo Bay:"
+					textFill="WHITE" />
+				<AnchorPane layoutX="256.0" layoutY="10.0">
+					<children>
+						<Label fx:id="money" layoutX="23.0" text="00000000"
+							textFill="WHITE" />
+					</children>
+				</AnchorPane>
+				<Label fx:id="cargoBayStatus" layoutX="425.0" layoutY="10.0"
+					text="25/25" textFill="WHITE" />
+				<Label fx:id="fuelLabel" layoutX="508.0" layoutY="10.0" text="20"
+					textFill="WHITE" />
+				<Label fx:id="playerTurn" layoutX="563.0" layoutY="10.0" text="1000"
+					textFill="WHITE" />
+				<ImageView fx:id="inactivePerson1" fitHeight="30.0"
+					fitWidth="40.0" layoutX="187.0" layoutY="5.0" pickOnBounds="true"
+					preserveRatio="true">
+					<image>
+						<Image url="@../resources/inactivePerson.png" />
+					</image>
+				</ImageView>
+				<ImageView fx:id="activePerson1" fitHeight="30.0"
+					fitWidth="40.0" layoutX="187.0" layoutY="5.0" pickOnBounds="true"
+					preserveRatio="true">
+					<image>
+						<Image url="@../resources/person.png" />
+					</image>
+				</ImageView>
+				<Label layoutX="132.0" layoutY="10.0" text="Crew:" textFill="WHITE" />
+				<ImageView fx:id="activePerson2" fitHeight="30.0"
+					fitWidth="40.0" layoutX="165.0" layoutY="5.0" pickOnBounds="true"
+					preserveRatio="true">
+					<image>
+						<Image url="@../resources/person.png" />
+					</image>
+				</ImageView>
+				<ImageView fx:id="inactivePerson2" fitHeight="30.0"
+					fitWidth="40.0" layoutX="165.0" layoutY="5.0" pickOnBounds="true"
+					preserveRatio="true">
+					<image>
+						<Image url="@../resources/inactivePerson.png" />
+					</image>
+				</ImageView>
+			</children>
+			<opaqueInsets>
+				<Insets />
+			</opaqueInsets>
+		</Pane>
+	</children>
+</AnchorPane>
